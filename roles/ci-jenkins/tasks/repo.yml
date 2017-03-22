@@ -1,0 +1,11 @@
+---
+
+- name: jenkins repo
+  get_url:
+    url: "{{ repo_url }}"
+    dest: "{{ repo_dest }}"
+
+- name: jenkins key
+  rpm_key:
+    state: present
+    key: "{{ jenkins_rpm_key }}"

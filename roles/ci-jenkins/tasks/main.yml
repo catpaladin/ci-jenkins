@@ -1,0 +1,14 @@
+---
+# Java
+- include: java.yml
+
+# repo
+- include: repo.yml
+
+# Install Jenkins
+- name: Install Jenkins
+  yum:
+    name: jenkins
+    state: present
+  notify:
+    - start jenkins

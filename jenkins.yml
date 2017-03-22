@@ -1,0 +1,6 @@
+---
+
+- name: Jenkins
+  hosts: default
+  roles:
+    - ci-jenkins
