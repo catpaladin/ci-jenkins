@@ -1,6 +1,10 @@
 ---
-
-- name: start jenkins
+# Start up Jenkins
+- name: Start Jenkins
   service:
     name: jenkins
     state: started
+
+# Safe-restart Jenkins
+- name: Restart Jenkins
+  shell: java -jar {{ jenkins.cli_dest }} -s http://localhost:{{ port }} safe-restart

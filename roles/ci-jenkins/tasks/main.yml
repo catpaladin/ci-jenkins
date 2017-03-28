@@ -11,4 +11,10 @@
     name: jenkins
     state: present
   notify:
-    - start jenkins
+    - Start Jenkins
+
+# Install plugins
+- include: plugins.yml
+
+# Install CLI
+- include: cli.yml

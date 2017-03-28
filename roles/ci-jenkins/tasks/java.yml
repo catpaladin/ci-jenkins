@@ -1,6 +1,6 @@
 ---
 
-- name: install java
+- name: Install Java
   yum:
     name: java
     state: present
